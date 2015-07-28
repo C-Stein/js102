@@ -5,3 +5,7 @@
 .number:nth-child(odd) {
 	color: azure;
 }
+
+#output {
+	background-color: darkgray;
+}
