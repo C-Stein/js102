@@ -45,16 +45,23 @@ function grabInput() {
   for (var i =0; i < newArray.length; i++) {
     newArray[i] = parseInt(newArray[i]);
   }
-  console.log("grabInput");
+  console.log("newArray is " + newArray);
   return newArray;
 }
+
+var output = "";
 
 function numberOlympics(array) {
   bigNumArray = findBigNumbers(newArray); 
   bigNumArray = sortArray(bigNumArray);
   return bigNumArray;
+}
 
-
+function placeOutput() {
+  for (var i = 0; i < bigNumArray.length; i++) {
+    output += "<div class='number'>" + bigNumArray[i] + "</div>";
+  }
+  $("#output").html(output);
 
 }
 
