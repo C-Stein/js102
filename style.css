@@ -6,10 +6,14 @@
 	color: azure;
 }
 
-#output {
+.number {
+	font-size: 2em;
+}
+
+body {
 	background-color: darkgray;
 }
 
-#input, #tricks {
+#submit, #tricks, #input {
 	margin: 5px;
 }
