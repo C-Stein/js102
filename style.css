@@ -9,3 +9,7 @@
 #output {
 	background-color: darkgray;
 }
+
+#input, #tricks {
+	margin: 5px;
+}
