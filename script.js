@@ -42,18 +42,28 @@ var bigNumArray = [];
 
 function grabInput() {
   newArray = $("#input").val().split(",");
+
   for (var i =0; i < newArray.length; i++) {
     newArray[i] = parseInt(newArray[i]);
   }
+  //for (var i = 0; i < newArray.length; i++) {
+    //if (newArray[i] === "NaN") {
+      //alert("Please follow directions.\n Only enter a list of numbers seperated by commas.")
+      //$("#input").val("");
+      //break;
+    }
+  }
+  $("#input").val("");
   console.log("newArray is " + newArray);
   return newArray;
 }
 
 var output = "";
 
-function numberOlympics(array) {
+function numberOlympics() {
   bigNumArray = findBigNumbers(newArray); 
   bigNumArray = sortArray(bigNumArray);
+  placeOutput();
   return bigNumArray;
 }
 
@@ -68,6 +78,7 @@ function placeOutput() {
 $(document).ready(function() {
 
 $("#submit").click(grabInput);
+$("#tricks").click(numberOlympics);
 
 });
 
